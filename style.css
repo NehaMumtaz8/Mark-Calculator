@@ -1,0 +1,371 @@
+/* =========================================================
+   MARK CALCULATOR - STYLESHEET
+   Clean, modern, professional look for a college project
+   ========================================================= */
+
+:root {
+  --primary: #3b5bdb;
+  --primary-dark: #2f4bc7;
+  --secondary: #495057;
+  --success: #2f9e44;
+  --danger: #e03131;
+  --warning: #f08c00;
+  --bg: #f4f6fb;
+  --card-bg: #ffffff;
+  --border: #e1e5ee;
+  --text-main: #23283a;
+  --text-muted: #6b7280;
+  --radius: 12px;
+  --shadow: 0 2px 10px rgba(30, 41, 59, 0.06);
+  --shadow-hover: 0 6px 18px rgba(30, 41, 59, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* ===================== HEADER ===================== */
+.app-header {
+  background: linear-gradient(135deg, var(--primary), #5c7cfa);
+  color: #fff;
+  text-align: center;
+  padding: 2.2rem 1rem 2.6rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.3rem;
+  font-size: 1.9rem;
+  letter-spacing: 0.3px;
+}
+
+.app-header p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* ===================== LAYOUT ===================== */
+.container {
+  max-width: 950px;
+  margin: -1.6rem auto 2rem;
+  padding: 0 1rem;
+}
+
+/* ===================== CARD ===================== */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.card-title {
+  margin: 0 0 1.1rem;
+  font-size: 1.15rem;
+  color: var(--text-main);
+  border-left: 4px solid var(--primary);
+  padding-left: 0.6rem;
+}
+
+/* ===================== FORM ===================== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  background: #fbfcfe;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.15);
+  background: #fff;
+}
+
+/* ===================== TABLE ===================== */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+thead {
+  background: #eef1fb;
+}
+
+th, td {
+  padding: 0.65rem 0.7rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+th {
+  color: var(--secondary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #f8f9ff;
+}
+
+td input[type="text"],
+td input[type="number"] {
+  width: 100%;
+  min-width: 80px;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+td input:focus {
+  border-color: var(--primary);
+}
+
+td input.input-error {
+  border-color: var(--danger);
+  background: #fff5f5;
+}
+
+.total-cell {
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.result-pass {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.result-fail {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.result-pending {
+  color: var(--text-muted);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.remove-btn:hover {
+  background: #ffe3e3;
+}
+
+/* ===================== BUTTONS ===================== */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.3rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: #eef1fb;
+  color: var(--primary-dark);
+  margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+  background: #dde3f9;
+}
+
+.btn-danger {
+  background: #fff0f0;
+  color: var(--danger);
+  border: 1px solid #ffd6d6;
+}
+
+.btn-danger:hover {
+  background: #ffe3e3;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ===================== ERROR BOX ===================== */
+.error-box {
+  background: #fff0f0;
+  border: 1px solid #ffc9c9;
+  color: #c92a2a;
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ===================== RESULT CARD ===================== */
+.result-card {
+  border: 1px solid #d0d9f7;
+  background: linear-gradient(180deg, #f6f8ff, #ffffff);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.result-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.result-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.result-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+#resStatus.pass {
+  color: var(--success);
+}
+
+#resStatus.fail {
+  color: var(--danger);
+}
+
+/* ===================== PROGRESS BAR ===================== */
+.progress-container {
+  background: #e9ecef;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 26px;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), #5c7cfa);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: width 0.4s ease;
+  white-space: nowrap;
+}
+
+/* ===================== FOOTER ===================== */
+.app-footer {
+  text-align: center;
+  padding: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
